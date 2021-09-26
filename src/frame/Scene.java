@@ -21,13 +21,15 @@ public class Scene extends JPanel{
     this.xFond1 = -50;
     this.xdx = -30;
     //background
-	  icoBackground=new ImageIcon(getClass().getResource("/image/mars2.jpeg"));
+    //**
+	  this.icoBackground=new ImageIcon(getClass().getResource("/image/mars2.jpeg"));
     //we first get the imageIcon then we get the real image via getImage method
 
     this.imgBackground = this.icoBackground.getImage();
 
     //main character
-    icoAstron = new ImageIcon(getClass().getResource("/image/astroMars.jpeg"));
+    //**
+    this.icoAstron = new ImageIcon(getClass().getResource("/image/astroMars.jpeg"));
     this.imgAstron = this.icoAstron.getImage();
 
     this.setFocusable(true);
@@ -37,14 +39,14 @@ public class Scene extends JPanel{
     Thread chronoEcron = new Thread(new Chrono());
 		chronoEcron.start();
 
-      }
+    }
   public void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
 		Graphics g2=(Graphics2D)g ;
 		
-		g2.drawImage(this.imgBackground, this.xFond1,0,null);//Desgin image Fond
-		g2.drawImage(imgAstron,200,160,null); //*** code proisoire
+		g2.drawImage(this.imgBackground, this.xFond1,0,null);
+		g2.drawImage(imgAstron,200,160,null); 
 	}
 	
 	public void deplacementFrond()
