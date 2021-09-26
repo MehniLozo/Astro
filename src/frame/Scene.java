@@ -21,15 +21,13 @@ public class Scene extends JPanel{
     this.xFond1 = -50;
     this.xdx = -30;
     //background
-    //**
-	  this.icoBackground=new ImageIcon(getClass().getResource("/image/mars2.jpeg"));
+	  icoBackground=new ImageIcon(getClass().getResource("/image/mars2.jpeg"));
     //we first get the imageIcon then we get the real image via getImage method
 
     this.imgBackground = this.icoBackground.getImage();
 
     //main character
-    //**
-    this.icoAstron = new ImageIcon(getClass().getResource("/image/astroMars.jpeg"));
+    icoAstron = new ImageIcon(getClass().getResource("/image/astroMars.jpeg"));
     this.imgAstron = this.icoAstron.getImage();
 
     this.setFocusable(true);
